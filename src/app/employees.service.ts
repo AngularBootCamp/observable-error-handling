@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
 import { interval } from 'rxjs/observable/interval';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
