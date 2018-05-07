@@ -5,7 +5,9 @@ import { catchError, map, switchMap, tap } from 'rxjs/operators';
 
 const API_URL = 'https://api.angularbootcamp.com';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class EmployeesService {
   constructor(private http: HttpClient) { }
 
