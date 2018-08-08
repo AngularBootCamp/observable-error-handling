@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of, interval } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { interval, of } from 'rxjs';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 
 const API_URL = 'https://api.angularbootcamp.com';
