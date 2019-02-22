@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { interval, of } from 'rxjs';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 
-const API_URL = 'https://api.angularbootcamp.com';
+const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class EmployeesService {
   constructor(private http: HttpClient) { }
 
   getEmployees(url = '/employees') {
-    return this.http.get(API_URL + url).pipe(
+    return this.http.get(apiUrl + url).pipe(
 
       catchError(err => {
         console.error('handling error within getEmployees()', err);
@@ -24,7 +24,7 @@ export class EmployeesService {
   poll1() {
     return interval(2000).pipe(
       map(n => n % 2 ? '/employeesZZZ' : '/employees'),
-      switchMap((dataUrl: string) => this.http.get(API_URL + dataUrl)),
+      switchMap((dataUrl: string) => this.http.get(apiUrl + dataUrl)),
 
       catchError((err) => {
         console.error('handling error within poll1()', err);
