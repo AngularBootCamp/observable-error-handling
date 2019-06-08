@@ -9,7 +9,7 @@ import { EmployeesService } from './employees.service';
     <h3>Employees</h3>
     <ul>
       <li *ngFor="let e of employees | async">
-        {{e.first_name}} {{e.last_name}}
+        {{ e.first_name }} {{ e.last_name }}
       </li>
     </ul>
   `

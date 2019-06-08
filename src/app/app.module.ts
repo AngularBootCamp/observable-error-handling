@@ -9,4 +9,4 @@ import { AppComponent } from './app.component';
   imports: [BrowserModule, HttpClientModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
